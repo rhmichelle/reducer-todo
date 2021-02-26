@@ -1,3 +1,16 @@
+const reducer = (state, action) => {
+    switch(action.type) {
+        case(TODO_ADD):
+            return({...state, title: action.payload});
+        case(TODO_TOGGLE):
+            return({...state, completed: action.payload});
+        case(TODO_CLEAR):
+            return({...state, initialState: ""});
+    }
+    return;
+}
+
+
 const initialState = [
     {
         item: 'Fill out Happy Planner',
@@ -23,12 +36,8 @@ const initialState = [
 
 
 
-const reducer = (state, action) => {
-    switch(action.type) {
+export default { reducer, initialState }
 
-    }
-    return;
-}
-
-export default { initialState, reducer }
-
+//Add new Todo
+//Toggle Todo to show completed
+//Clear Todos
