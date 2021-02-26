@@ -1,3 +1,8 @@
+export const TODO_ADD = "TODO_ADD";
+export const TODO_TOGGLE = "TODO_TOGGLE";
+export const TODO_CLEAR = "TODO_CLEAR";
+
+
 const reducer = (state, action) => {
     switch(action.type) {
         case(TODO_ADD):
@@ -7,7 +12,7 @@ const reducer = (state, action) => {
         case(TODO_CLEAR):
             return({...state, initialState: ""});
     }
-    return;
+    return reducer;
 }
 
 
